@@ -1,0 +1,394 @@
+@import url('https://fonts.cdnfonts.com/css/robust');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+}
+
+header{
+    height: 20vh;
+    display: flex;
+    justify-content: end;
+}
+
+.logo{
+  width: 25%;
+  margin-top: -300px;
+  margin-left: 30px;
+}
+
+h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 56px;
+    background: linear-gradient(to right, white, #FF780A);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: 'ROBUST', sans-serif;
+}
+
+button {
+    width: 10em;
+    margin-right: 70px;
+    margin-top: 30px;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #FF780A;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: black;
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  
+  button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: black;
+    transition: 0.5s;
+  }
+  
+  button:hover::before, button:hover::after {
+    transform: scale(0)
+  }
+  
+  button:hover {
+    box-shadow: inset 0px 0px 25px #FF780A;
+  }
+
+.container {
+    position: relative;
+    width: 280px;
+    margin: 100px auto 0 auto;
+    perspective: 1000px;
+    margin-top: -10px;
+  }
+  
+  .carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; 
+    animation: rotate360 60s infinite forwards linear;
+  }
+  .carousel__face { 
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.3);
+    display: flex;
+  }
+  
+  span {
+    margin: auto;
+    font-size: 2rem;
+  }
+  
+  
+  .carousel__face:nth-child(1) {
+    background-image: url("https://www.industriaanimacion.com/wp-content/uploads/2020/06/IA-Crunchyroll.jpg");
+    transform: rotateY(  0deg) translateZ(430px); }
+  .carousel__face:nth-child(2) { 
+    background-image: url("https://cinepremiere.com.mx/wp-content/uploads/2020/02/Demon-Slayer-1024x559.jpg");
+      transform: rotateY( 40deg) translateZ(430px); }
+  .carousel__face:nth-child(3) {
+    background-image: url("https://www.comingsoon.net/wp-content/uploads/sites/3/2023/08/jujutsu-kaisen-shibuya-arc-deaths.png");
+    transform: rotateY( 80deg) translateZ(430px); }
+  .carousel__face:nth-child(4) {
+    background-image: url("https://i.pinimg.com/736x/81/3a/5b/813a5b3f806f8ba19e05173ce5c22938.jpg");
+    transform: rotateY(120deg) translateZ(430px); }
+  .carousel__face:nth-child(5) { 
+    background-image: url("https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/c0e2440d3f27196ba37abaed8b824df5.jpe");
+   transform: rotateY(160deg) translateZ(430px); }
+  .carousel__face:nth-child(6) { 
+    background-image: url("https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/b315cf15963b63b89a9028400294949d.jpe");
+   transform: rotateY(200deg) translateZ(430px); }
+  .carousel__face:nth-child(7) { 
+    background-image: url("https://preview.redd.it/was-episode-1-a-good-introduction-to-the-series-v0-blbqbzzmf7jb1.jpg?auto=webp&s=62c853412cf8844202dd0957d717fb7ce5a9b024");
+   transform: rotateY(240deg) translateZ(430px); }
+  .carousel__face:nth-child(8) {
+    background-image: url("https://shonakid.de/wp-content/uploads/2022/08/haikyu.jpg");
+    transform: rotateY(280deg) translateZ(430px); }
+  .carousel__face:nth-child(9) {
+    background-image: url("https://preview.redd.it/s6th3s6b2bh61.jpg?width=1920&format=pjpg&auto=webp&s=28b7f7dee8bc1fdb63faae3ee34b66e886c322f0");
+    transform: rotateY(320deg) translateZ(430px); }
+  
+  
+  
+  @keyframes rotate360 {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-360deg);
+    }
+  }
+
+  .popular{
+    color: #FF780A;
+    margin-left: -50px;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+   }
+
+.container2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 400px;
+  height: 600px;
+  gap: 10px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  > div {
+    flex: 0 0 120px;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #1e0e3e;
+    position: relative;
+    overflow: hidden;
+
+    &:nth-of-type(1) {
+      background: url("https://uploads.jovemnerd.com.br/wp-content/uploads/2023/03/fr_ofniauaulu7k__40213le2n-760x1075.jpeg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(2) {
+      background: url("https://angelotti.files.wordpress.com/2023/09/one-piece-capa-anime-001-luffy-nami-zoro-usopp-sanji.webp")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(3) {
+      background: url("https://img.elo7.com.br/product/original/47084E9/poster-anime-spy-x-family-a2-tamanho-60x42-cm-lo14-decoracao-quarto-nerd.jpg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(4) {
+      background: url("https://sm.ign.com/ign_br/screenshot/default/kimetsu_6jp8.jpg")
+        no-repeat 50% / cover;
+    }
+
+    .content {
+      font-size: 1.5rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      opacity: 0;
+      flex-direction: column;
+      height: 100%;
+      justify-content: flex-end;
+      background: rgb(2, 2, 46);
+      background: linear-gradient(
+        0deg,
+        rgba(2, 2, 46, 0.6755077030812324) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translatey(100%);
+      transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+      visibility: hidden;
+
+      span {
+        display: block;
+        margin-top: 5px;
+        font-size: 1.2rem;
+      }
+    }
+
+    &:hover {
+      flex: 0 0 250px;
+      box-shadow: 1px 3px 15px #7645d8;
+      transform: translatey(-30px);
+    }
+
+    &:hover .content {
+      opacity: 1;
+      transform: translatey(0%);
+      visibility: visible;
+    }
+  }
+}
+
+
+#produtos {
+    width: 800px;
+    height: 470px;
+    margin: 0 auto;
+}
+.produto1, .produto2, .produto3 {
+    width: 200px;
+    height: 300px;
+    float: left;
+    margin-left: 50px;
+    text-align: center;
+    margin-top: 50px;
+}
+.preco { color: #A4A4A4; }
+span { color: white; }
+p { color: #FF780A; text-transform: uppercase; font-family: 'ROBUST', sans-serif; font-size: 24px;}
+
+img{
+  width: 220px;
+}
+
+.ultimo{
+  height: 500px;
+  background-color: white;
+}
+
+.imgultima{
+  width: 320px;
+  position: relative;
+  left: 190px;
+  top: -100px;
+}
+
+.imgpng{
+  width: 300px;
+  position: relative;
+  top: 190px;
+  left: -100px;
+}
+
+.login{
+  width: 300px;
+  position: relative;
+  background-color: black;
+  left: 70%;
+  transform: translate(-70%);
+  top: -220px;
+  border-radius: 10px;
+  overflow: hidden;
+  color: white;
+  box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
+}
+
+.login .slider {
+  width: 200%;
+  position: relative;
+  transition: transform ease-out 0.3s;
+  display: flex;
+}
+
+#register_toggle {
+  display: none;
+}
+
+.login #register_toggle:checked + .slider {
+  transform: translateX(-50%);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 1.5em 3em;
+  width: 50%;
+}
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+form .form_control {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+form .form_control .label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transition: transform ease 0.2s;
+  transform: translate(0%, -50%);
+  font-size: 0.75em;
+  user-select: none;
+  pointer-events: none;
+  color: #b0b0b0;
+}
+
+form .form_control .input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  transition: box-shadow ease 0.2s;
+  box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e;
+}
+
+form .form_control .input:focus,
+form .form_control .input:valid {
+  box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%), inset 3px 3px 4px #0e0e0e, inset -3px -3px 4px #5f5e5e;
+}
+
+form .form_control .input:focus + .label,
+form .form_control .input:valid + .label {
+  transform: translate(-150%, -50%);
+}
+
+form button {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  margin-left: 40%;
+  outline: none;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  transition: box-shadow ease 0.1s;
+  box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
+}
+
+form button:active {
+  box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%), inset 3px 3px 4px #0e0e0e, inset -3px -3px 4px #5f5e5e;
+}
+
+.bottom_text {
+  font-size: 0.65em;
+}
+
+.bottom_text .swtich {
+  font-weight: 700;
+  color: #FF780A;
+  cursor: pointer;
+}
